@@ -4,7 +4,7 @@ import subprocess
 import datetime
 import shutil
 logger= logging.getLogger(__name__)
-
+# to add more news_sites_uids, you will need to edit the file config.yaml inside the folder Extract
 news_sites_uids= ['eluniversal','elpais','panorama']
 
 def main():
