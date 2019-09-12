@@ -1,3 +1,11 @@
+list_of_packages =['yaml','argparse','datetime','shutil','csv','logging','regex','requests','urllib3','BeautifulSoup4','nltk','urllib','pandas','hashlib','sqlalchemy']
+import subprocess
+for i in list_of_packages:
+	try:
+		import i
+	except ModuleNotFoundError:
+		subprocess.run(['pip','install',i])
+
 import logging
 logging.basicConfig(level=logging.INFO)
 import subprocess
