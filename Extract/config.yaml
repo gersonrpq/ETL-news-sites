@@ -1,0 +1,19 @@
+news_sites:
+    eluniversal:
+      url: https://www.eluniversal.com.mx
+      queries:
+        homepage_article_links: '.field-content a'
+        article_body: '.field-name-body'
+        article_title: '.pane-content h1'
+    elpais:
+      url: https://elpais.com
+      queries:
+        homepage_article_links: '.articulo-titulo a'
+        article_body: '.articulo-cuerpo p'
+        article_title: '.articulo-titulo'
+    panorama:
+      url: https://www.panorama.com.ve
+      queries:
+        homepage_article_links: '.tit-nota-fila3 a'
+        article_body: '.cuerpo p'
+        article_title: '.titular_detalle'
