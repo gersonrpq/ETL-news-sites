@@ -8,7 +8,6 @@ for i in list_of_packages:
 
 import logging
 logging.basicConfig(level=logging.INFO)
-import subprocess
 import datetime
 import shutil
 logger= logging.getLogger(__name__)
@@ -16,10 +15,12 @@ logger= logging.getLogger(__name__)
 # config.yaml is inside the folder Extract
 news_sites_uids= ['eluniversal','elpais','panorama']
 
+
 def main():
     _extract()
     _transform()
     _load()
+
 
 def _extract():
     logger.info('Starting extract process')
@@ -29,6 +30,7 @@ def _extract():
         subprocess.run(['python','main.py',news_site_uid], cwd='./Extract')
     for news_site_uid in news_sites_uids:
         shutil.move("Extract/{a}_{b}_articles.csv".format(a = news_site_uid,b=now),"Transform/{a}_{b}_articles.csv".format(a = news_site_uid, b = now))
+
 
 def _transform():
     logger.info('Starting transform process')
@@ -50,7 +52,6 @@ def _load():
        # subprocess.run(['rm',clean_data_filename], cwd = './Load')
 
     
-
 if __name__ == '__main__':
     main()
 
