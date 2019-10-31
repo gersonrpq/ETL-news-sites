@@ -14,6 +14,7 @@ Data is taken from a .csv file created by the extracting process, the missing in
 (Libraries like pandas, nltk and nltk.corpus are need)
 
 * Load 
+
 The cleaned .csv file with more information is loaded in relational database, creating or making bigger a .db file.
 (sqlalchemy is needed)
 
