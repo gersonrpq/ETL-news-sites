@@ -1,21 +1,21 @@
 # ETL news sites
 
-A three phases project where processes like Extracting, Transforming and Loading are carried out.
+A three phase project where processes like Extracting, Transforming and Loading are carried out.
 And all working together using a pipeline.
 
 * Extract
 
-Data is taken usig techniques of web scraping from news websites such as [El universal][1] , [El pais][2] and [Panorama][3] where the titles, bodies and urls of news are saved in a .csv file.
+Data is taken using techniques of web scraping from news websites such as [El universal][1] , [El pais][2] and [Panorama][3] where the titles, bodies and urls of news are saved in a .csv file.
 (Libraries like pyyaml, resquests, regex and urllib3 are needed)
 
 * Transform 
 
-Data is taken from a .csv file created by the extracting process, the missing information is filled, the bodies is cleaned and more information tokenizing the body and title of the news is added. A new .csv file is created to be used by the load process
+Data is taken from a .csv file created by the extracting process, the missing information is filled, the bodies and titles are cleaned and more information tokenizing the body and title of the news is added. A new .csv file is created to be used by the load process
 (Libraries like pandas, nltk and nltk.corpus are need)
 
 * Load 
 
-The cleaned .csv file with more information is loaded in relational database, creating or making bigger a .db file.
+The cleaned .csv file with more information is loaded in a relational database, creating or making bigger a .db file.
 (sqlalchemy is needed)
 
 ## How to use
