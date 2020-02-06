@@ -26,7 +26,7 @@ class NewsPage:
 
 class HomePage(NewsPage):
     
-    def __init(self, news_site_uid,url):
+    def __init__(self, news_site_uid,url):
         super().__init__(news_site_uid, url)
 
     @property
@@ -39,7 +39,7 @@ class HomePage(NewsPage):
 
 class ArticlePage(NewsPage):
     def __init__(self, news_site_uid, url):
-        super().__init__(news_site_uid,url)
+        super().__init__(news_site_uid, url)
 
     @property
     def body(self):
